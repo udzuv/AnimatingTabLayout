@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hoge.hogeapp.MainActivity">
+
+    <data>
+        <variable name="itemTabData" type="com.hoge.hogeapp.MainActivity.ItemTabData" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/tab_color_selector">
+
+            <ImageView
+                android:id="@+id/tab_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:src="@{itemTabData.tabIcon}"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{itemTabData.tabTitle}"
+                android:layout_gravity="center"
+                android:textColor="@color/color_green1"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
